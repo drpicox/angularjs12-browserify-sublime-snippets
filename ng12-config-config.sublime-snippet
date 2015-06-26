@@ -1,0 +1,20 @@
+<snippet>
+	<content><![CDATA[// ${1:Some}.config.js
+/*
+	${1:Some}Config
+
+		${2:Some documentation}
+*/
+'use strict';
+
+module.exports = ${1:Some}Config;
+
+ ${1:Some}Config.\$inject = [${3/(\$(\w+)|\w+)/'$1'/g}];
+function ${1:Some}Config(${3:providers}) {
+	${4:code}
+}
+
+]]></content>
+	<tabTrigger>ng12-config-config</tabTrigger>
+	<scope>source.js, text.plain</scope>
+</snippet>

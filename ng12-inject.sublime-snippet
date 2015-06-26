@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[${1:Some}.\$inject = [${2/ (\$(\w+)|\w+) /'$1'/g}];
+function ${1:Some}  (${2:dependencies}) {
+]]></content>
+	<tabTrigger>ng12-inject</tabTrigger>
+	<scope>source.js, text.plain</scope>
+</snippet>

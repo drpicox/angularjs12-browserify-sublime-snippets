@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[.${1:config}(require('./${2:SomeConfig}.${1:config}'))
+]]></content>
+    <tabTrigger>ng12-module-config</tabTrigger>
+    <scope>source.js, text.plain</scope>
+</snippet>

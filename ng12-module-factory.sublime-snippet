@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[.${1:factory}('${2:ServiceName}', require('./${2:ServiceName}.${1:factory}'))
+]]></content>
+    <tabTrigger>ng12-module-factory</tabTrigger>
+    <scope>source.js, text.plain</scope>
+</snippet>

@@ -1,0 +1,30 @@
+<snippet>
+	<content><![CDATA[// ${1:ServiceState}.factory.js
+/*
+	${1:Service}State:
+		-    
+
+*/
+'use strict';
+
+module.exports = ${1:Service}StateFactory;
+
+${1:Service}StateFactory.\$inject = [${2/ (\$(\w+)|\w+) /'$1'/g},'drpxUpdateable'];
+function ${1:Service}StateFactory  (${2:dependencies}, drpxUpdateable ) {
+	var state = {
+		${3:model}: ${4:value},
+		${5:func}: ${5:func},//()
+		\$update: drpxUpdateable('${6:app}.${1:Service}')
+	};
+	return state;
+
+	//////
+
+	function ${5:func}() {
+
+	}
+}
+]]></content>
+	<tabTrigger>ng12-factory-state</tabTrigger>
+	<scope>source.js, text.plain</scope>
+</snippet>

@@ -1,0 +1,26 @@
+<snippet>
+	<content><![CDATA[// ${1:Some}.directive.js
+/*
+	${1:Some}Directive
+*/
+'use strict';
+
+module.exports = ${1:Some}Directive;
+
+${1:Some}Directive.\$inject = [${2/ (\$(\w+)|\w+) /'$1'/g}];
+function ${1:Some}Directive  (${2:dirdependencies}) {
+	var directive = {
+		restrict: 'A',
+		link: link
+	};
+	return directive;
+
+	function link(scope, element, attrs) {
+		${3:implementation}
+	}
+}
+
+]]></content>
+	<tabTrigger>ng12-directive-decorator</tabTrigger>
+	<scope>source.js, text.plain</scope>
+</snippet>

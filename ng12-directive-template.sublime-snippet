@@ -1,0 +1,41 @@
+<snippet>
+	<content><![CDATA[// ${1:Some}.directive.js
+/*
+	${1:Some}Directive
+*/
+'use strict';
+
+module.exports = ${1:Some}Directive;
+
+${1:Some}Directive.\$inject = [${2/ (\$(\w+)|\w+) /'$1'/g}];
+function ${1:Some}Directive  (${2:dirdependencies}) {
+	var directive = {
+		restrict: 'A',
+		template: require('./${1:Some}.tpl.html'),
+		scope: {
+			${3:bindings},
+		},
+		controller: ${1:Some}Controller,
+		controllerAs: 'vm'
+	};
+	return directive;
+}
+
+${1:Some}Controller.\$inject = [${4/ (\$(\w+)|\w+) /'$1'/g}];
+function ${1:Some}Controller  (${4:ctrldependencies}) {
+	var vm = this;
+
+	vm.${4:func} = ${4:func};//()
+
+	///////
+
+	function ${4:func}() {
+		
+	}
+}
+
+
+]]></content>
+	<tabTrigger>ng12-directive-template</tabTrigger>
+	<scope>source.js, text.plain</scope>
+</snippet>

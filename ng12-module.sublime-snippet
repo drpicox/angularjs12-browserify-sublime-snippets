@@ -1,0 +1,21 @@
+<snippet>
+	<content><![CDATA[// index.js
+/*
+	Module ${1:module.name}
+*/
+'use strict';
+
+var angular = require('angular');
+
+module.exports = angular.module('${1:module.name}', [
+
+	${2:require-module}
+])
+
+${3:module-component}
+
+.name;
+]]></content>
+	<tabTrigger>ng12-module</tabTrigger>
+	<scope>source.js, text.plain</scope>
+</snippet>

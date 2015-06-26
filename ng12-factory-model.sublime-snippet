@@ -1,0 +1,33 @@
+<snippet>
+	<content><![CDATA[// ${1:ModelName}.factory.js
+/*
+	${1:ModelName}:
+		.
+
+*/
+'use strict';
+
+module.exports = ${1:ModelName}Factory;
+
+${1:ModelName}Factory.\$inject = [${2/ (\$(\w+)|\w+) /'$1'/g}];
+function ${1:ModelName}Factory  (${2:dependencies}) {
+	/*jshint validthis: true */
+
+	function ${1:ModelName}() {
+		${3:initialize}
+	}
+
+	${1:ModelName}.prototype.${4:func} = ${4:func};
+
+	return ${1:ModelName};
+
+	///////
+
+	function ${4:func}() {
+
+	}
+}
+]]></content>
+	<tabTrigger>ng12-factory-model</tabTrigger>
+	<scope>source.js, text.plain</scope>
+</snippet>

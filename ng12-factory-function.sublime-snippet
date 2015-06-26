@@ -1,0 +1,26 @@
+<snippet>
+	<content><![CDATA[// ${1:func}.factory.js
+/*
+	${1:func}:
+		-    
+
+*/
+'use strict';
+
+module.exports = ${1:func}Factory;
+
+${1:func}Factory.\$inject = [${2/ (\$(\w+)|\w+) /'$1'/g}];
+function ${1:func}Factory  (${2:dependencies}) {
+
+	return ${1:func};
+
+	//////
+
+	function ${1:func}() {
+
+	}
+}
+]]></content>
+	<tabTrigger>ng12-factory-function</tabTrigger>
+	<scope>source.js, text.plain</scope>
+</snippet>

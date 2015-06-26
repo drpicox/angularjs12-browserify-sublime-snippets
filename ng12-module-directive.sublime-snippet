@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[.${1:directive}('${2:app}${3:Some}', require('./${3:Some}.${1:directive}'))
+]]></content>
+    <tabTrigger>ng12-module-directive</tabTrigger>
+    <scope>source.js, text.plain</scope>
+</snippet>

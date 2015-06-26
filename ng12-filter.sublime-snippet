@@ -1,0 +1,25 @@
+<snippet>
+	<content><![CDATA[// ${1:Some}.filter.js
+/*
+	| ${2:app}${1:Some}:${3:arg}
+
+		${4:Some documentation}
+*/
+'use strict';
+
+module.exports = ${1:Some}Filter;
+
+${1:Some}Filter.\$inject = [${5/ (\$(\w+)|\w+) /'$1'/g}];
+function ${1:Some}Filter  (${5:providers}) {
+	
+	return ${1:Some};
+
+	function ${1:Some}(input, ${3:arg}) {
+		return input ${3:arg};
+	}
+}
+
+]]></content>
+	<tabTrigger>ng12-filter</tabTrigger>
+	<scope>source.js, text.plain</scope>
+</snippet>

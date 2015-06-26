@@ -1,0 +1,45 @@
+<snippet>
+	<content><![CDATA[// ${1:ServiceRemote}.provider.js
+/*
+	${1:ServiceRemote}:
+		- ${7:load}(query): *result
+
+	config:
+		-
+
+*/
+'use strict';
+
+module.exports = ${1:ServiceRemote}Provider;
+
+
+${1:ServiceRemote}Provider.\$inject = [${2/ (\$(\w+)|\w+) /'$1'/g}];
+function ${1:ServiceRemote}Provider  (${2:providers}) {
+	var config = this.config = {
+		${3:url}: '/${4:api}'
+	};
+
+	/* @ngInject */
+	this.\$get = ${1:ServiceRemote}Factory;
+
+
+    ${1:ServiceRemote}Factory.\$inject = [${5/ (\$(\w+)|\w+) /'$1'/g}];
+	function ${1:ServiceRemote}Factory  (${5:dependencies,}${6:\$http}) {
+		var remote = {
+			${7:load}: ${7:load}//()
+		};
+		return remote;
+
+		//////
+		
+		function ${7:load}(query) {
+			return ${6:\$http}.get(config.${3:url}, {params:query,cache:true}).then(function(response) {
+				return response.data;
+			});
+		}
+	}
+}
+]]></content>
+	<tabTrigger>ng12-provider-remote</tabTrigger>
+	<scope>source.js, text.plain</scope>
+</snippet>

@@ -1,0 +1,35 @@
+<snippet>
+	<content><![CDATA[// ${1:ModelName}.factory.js
+/*
+	${1:ModelName}:
+		.
+
+*/
+'use strict';
+
+module.exports = ${1:ModelName}Factory;
+
+${1:ModelName}Factory.\$inject = [${3/ (\$(\w+)|\w+) /'$1'/g}];
+function ${1:ModelName}Factory  (${3:dependencies}) {
+	/*jshint validthis: true */
+
+	function ${1:ModelName}() {
+		${2:ParentName}.call(this);		
+	}
+
+	${1:ModelName}.prototype = Object.create(${2:ParentName}.prototype);
+	${1:ModelName}.prototype.constructor = ${1:ModelName};
+	${1:ModelName}.prototype.${4:func} = ${4:func};
+
+	return ${1:ModelName};
+
+	///////
+
+	function ${4:func}() {
+		
+	}
+}
+]]></content>
+	<tabTrigger>ng12-factory-model-inherit</tabTrigger>
+	<scope>source.js, text.plain</scope>
+</snippet>

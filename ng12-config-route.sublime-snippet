@@ -1,0 +1,33 @@
+<snippet>
+	<content><![CDATA[// ${1:SomeRoute}.config.js
+/*
+	${1:Path}Route
+
+*/
+'use strict';
+
+module.exports = ${1:Path}Route;
+
+${1:Path}Route.\$inject = [${3/(\$(\w+)|\w+)/'$1'/g}];
+function ${1:Path}Route(${3:providers},$routeProvider) {
+	$routeProvider.when('/${4:path}', {
+		template: require('./${1:Path}.tpl.html'),
+		controller: ${1:Path}Controller,
+		controllerAs: 'vm',
+		resolve: {
+			${5:resolve}
+		}
+	});
+}
+
+${1:Path}Controller.\$inject = [${5/(\$(\w+)|\w+)/'$1'/g}];
+function ${1:Path}Controller(${5:resolve}) {
+	var vm = this;
+
+	vm.${5:resolve} = ${5:resolve};
+}
+
+]]></content>
+	<tabTrigger>ng12-config-route</tabTrigger>
+	<scope>source.js, text.plain</scope>
+</snippet>
