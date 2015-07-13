@@ -12,13 +12,13 @@ module.exports = ${1:ServiceName}Factory;
 ${1:ServiceName}Factory.\$inject = [${2/ (\$(\w+)|\w+) /'$1'/g}];
 function ${1:ServiceName}Factory  (${2:dependencies}) {
 	var service = {
-		${3:func}: ${3:func}//()
+		${3:method}: ${3:method}//()
 	};
 	return service;
 
 	//////
 
-	function ${3:func}() {
+	function ${3:method}() {
 
 	}
 }

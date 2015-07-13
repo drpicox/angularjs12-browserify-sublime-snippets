@@ -26,13 +26,13 @@ function ${1:ServiceName}Provider  (${2:providers}) {
     ${1:ServiceName}Factory.\$inject = [${5/ (\$(\w+)|\w+) /'$1'/g}];
 	function ${1:ServiceName}Factory  (${5:dependencies}) {
 		var service = {
-			${6:func}: ${6:func}//()
+			${6:method}: ${6:method}//()
 		};
 		return service;
 
 		//////
 		
-		function ${6:func}() {
+		function ${6:method}() {
 			
 		}
 	}

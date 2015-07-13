@@ -13,14 +13,14 @@ ${1:Service}StateFactory.\$inject = [${2/ (\$(\w+)|\w+) /'$1'/g},'drpxUpdateable
 function ${1:Service}StateFactory  (${2:dependencies}, drpxUpdateable ) {
 	var state = {
 		${3:model}: ${4:value},
-		${5:func}: ${5:func},//()
+		${5:method}: ${5:method},//()
 		\$update: drpxUpdateable('${6:app}.${1:Service}')
 	};
 	return state;
 
 	//////
 
-	function ${5:func}() {
+	function ${5:method}() {
 
 	}
 }

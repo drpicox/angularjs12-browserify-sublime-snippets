@@ -25,11 +25,12 @@ ${1:Some}Controller.\$inject = [${4/ (\$(\w+)|\w+) /'$1'/g}];
 function ${1:Some}Controller  (${4:ctrldependencies}) {
 	var vm = this;
 
-	vm.${4:func} = ${4:func};//()
+	${4/ (\w+), /vm.$1 = $1;\n\t/g}
+	vm.${5:method} = ${5:method};//()
 
 	///////
 
-	function ${4:func}() {
+	function ${5:method}() {
 		
 	}
 }
